@@ -1,8 +1,12 @@
+// Roy Rui 300176548
+// -pthread command is needed to compile the problem
+
+
 #include <stdio.h>
 #include <pthread.h>
 #include <stdlib.h>
 #include <unistd.h>
-// -pthread command is needed to compile the problem
+
 // Shared variables
 int a, b, turn; 
 pthread_mutex_t lock;  // Mutex for synchronization
