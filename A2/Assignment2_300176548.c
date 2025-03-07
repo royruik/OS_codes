@@ -21,7 +21,7 @@ void* thread_function(void* arg) {
         
         // Update 'b' based on thread ID
         b += (id + 1);
-        printf("Thr%d: (b+%d=%d)\n", id, id+1, b);
+        printf("Thr%d, (b+%d=%d)\n", id, id+1, b);
 
         // Set turn for next thread (Round Robin)
         turn = (turn + 1) % 4;
