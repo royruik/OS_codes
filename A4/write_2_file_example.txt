@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int K;
+    float x;
+    int i;
+    FILE *fp;
+    printf("how many number to store in the file?\n");
+    scanf("%d", &K);
+    
+    fp = fopen("write_data.txt", "w");
+    if(fp!=NULL){
+        
+        fprintf(fp, "%d\n", K); //add file size in header
+        for(i=0; i<K; i++){
+            printf("enter a number\n");
+            scanf("%f",&x);
+            fprintf(fp, "%f ", x);
+        }
+        fprintf(fp, "\n");
+        fclose(fp);
+    }
+    printf("%d numbers stoded\nThe end",K);
+    return 0;
+}
